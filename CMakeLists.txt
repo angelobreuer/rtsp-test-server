@@ -41,4 +41,6 @@ target_link_libraries(${PROJECT_NAME}
 if(SNAPCRAFT_BUILD)
     install(TARGETS ${PROJECT_NAME} DESTINATION bin)
     install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/rtsp-test-server.conf.sample DESTINATION etc)
+else()
+    install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 endif()
